@@ -4,3 +4,6 @@ from django.shortcuts import render  # type: ignore
 
 def index(request):
     return render(request, 'core/index.html')
+
+def politica(request):
+    return render(request, 'core/politica.html')

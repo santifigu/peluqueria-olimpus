@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Panel del negocio</h1>
+
+<div class="grid">
+    <div class="card">
+        <h3>Ingresos del mes (aprobados)</h3>
+        <p class="precio">${{ ingresos_mes }}</p>
+    </div>
+    <div class="card">
+        <h3>Turnos de hoy</h3>
+        <p class="precio">{{ turnos_hoy.count }}</p>
+    </div>
+    <div class="card">
+        <h3>Reseñas por moderar</h3>
+        <p class="precio">{{ resenas_pendientes }}</p>
+    </div>
+</div>
+
+<h2>Agenda de hoy</h2>
+<table class="tabla">
+    <tr><th>Hora</th><th>Cliente</th><th>Servicio</th><th>Profesional</th><th>Estado</th></tr>
+    {% for turno in turnos_hoy %}
+    <tr>
+        <td>{{ turno.hora|time:"H:i" }}</td>
+        <td>{{ turno.nombre_cliente }}</td>
+        <td>{{ turno.servicio.nombre }}</td>
+        <td>{{ turno.profesional.nombre|default:"-" }}</td>
+        <td>{{ turno.get_estado_display }}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="5">No hay turnos para hoy.</td></tr>
+    {% endfor %}
+</table>
+
+<h2>Servicios más pedidos</h2>
+<ul>
+    {% for s in servicios_top %}
+    <li>{{ s.servicio__nombre }} — {{ s.cantidad }} turnos completados</li>
+    {% endfor %}
+</ul>
+{% endblock %}

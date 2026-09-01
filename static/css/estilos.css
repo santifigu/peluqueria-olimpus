@@ -1,0 +1,30 @@
+:root {
+    --color-primario: #6b4226;
+    --color-acento: #d9a441;
+    --color-fondo: #faf7f2;
+    --color-texto: #2b2b2b;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: 'Segoe UI', system-ui, sans-serif; background: var(--color-fondo); color: var(--color-texto); }
+.contenedor { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+.header { background: var(--color-primario); color: #fff; padding: 1rem 0; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+.logo { color: #fff; font-size: 1.4rem; font-weight: bold; text-decoration: none; }
+.nav a { color: #fff; text-decoration: none; margin-left: 1.2rem; }
+.nav a:hover { color: var(--color-acento); }
+main { padding: 2.5rem 0; min-height: 60vh; }
+.hero { text-align: center; padding: 3rem 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
+.card { background: #fff; border-radius: 10px; padding: 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.precio { color: var(--color-primario); font-weight: bold; }
+.btn, .btn-sm { display: inline-block; background: var(--color-acento); color: #2b2b2b; text-decoration: none; padding: 0.7rem 1.4rem; border-radius: 6px; font-weight: bold; border: none; cursor: pointer; }
+.btn-sm { padding: 0.4rem 0.9rem; font-size: 0.9rem; }
+.form p { display: flex; flex-direction: column; gap: 0.3rem; }
+.form input, .form textarea, .form select { padding: 0.6rem; border: 1px solid #ccc; border-radius: 6px; }
+.mensaje { padding: 0.8rem; border-radius: 6px; margin-bottom: 1rem; }
+.mensaje-success { background: #d4f4dd; }
+.mensaje-error { background: #fbdada; }
+.tabla { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.tabla th, .tabla td { text-align: left; padding: 0.6rem; border-bottom: 1px solid #ddd; }
+.footer { background: var(--color-primario); color: #fff; padding: 1.5rem 0; margin-top: 3rem; text-align: center; }
+.footer a { color: var(--color-acento); margin: 0 0.5rem; }

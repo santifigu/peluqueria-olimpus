@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>¡Turno confirmado!</h1>
+<div class="card">
+    <p><strong>Servicio:</strong> {{ turno.servicio.nombre }}</p>
+    <p><strong>Fecha:</strong> {{ turno.fecha|date:"d/m/Y" }} a las {{ turno.hora|time:"H:i" }}</p>
+    {% if turno.profesional %}<p><strong>Profesional:</strong> {{ turno.profesional.nombre }}</p>{% endif %}
+    <p><strong>Estado:</strong> {{ turno.get_estado_display }}</p>
+</div>
+<p>Te enviamos un email con los detalles a {{ turno.email_cliente }}.</p>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero">
+    <h1>{{ negocio.nombre|default:"Bienvenido/a" }}</h1>
+    <p>{{ negocio.descripcion }}</p>
+    <a class="btn" href="{% url 'reservas:reservar' %}">Reservar turno</a>
+</section>
+
+<section>
+    <h2>Nuestros servicios</h2>
+    <div class="grid">
+        {% for servicio in servicios %}
+        <div class="card">
+            <h3>{{ servicio.nombre }}</h3>
+            <p>{{ servicio.descripcion }}</p>
+            <p class="precio">${{ servicio.precio }} · {{ servicio.duracion_minutos }} min</p>
+        </div>
+        {% empty %}
+        <p>Todavía no cargaste servicios. Agregalos desde el panel de administración.</p>
+        {% endfor %}
+    </div>
+    <a href="{% url 'catalogo:catalogo' %}">Ver catálogo completo →</a>
+</section>
+{% endblock %}

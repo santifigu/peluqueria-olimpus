@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ negocio.nombre|default:"Peluquería" }}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor header-inner">
+            <a href="{% url 'catalogo:home' %}" class="logo">{{ negocio.nombre|default:"Peluquería" }}</a>
+            <nav class="nav">
+                <a href="{% url 'catalogo:home' %}">Inicio</a>
+                <a href="{% url 'catalogo:catalogo' %}">Servicios</a>
+                <a href="{% url 'reservas:reservar' %}">Reservar turno</a>
+                <a href="{% url 'catalogo:contacto' %}">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="mensaje mensaje-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <p>{{ negocio.direccion }} · {{ negocio.telefono }}</p>
+            {% if negocio.whatsapp %}<a href="https://wa.me/{{ negocio.whatsapp }}" target="_blank">WhatsApp</a>{% endif %}
+            {% if negocio.instagram %}<a href="{{ negocio.instagram }}" target="_blank">Instagram</a>{% endif %}
+        </div>
+    </footer>
+</body>
+</html>

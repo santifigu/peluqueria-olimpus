@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Dejanos tu reseña</h1>
+<p>¿Cómo estuvo tu turno de {{ turno.servicio.nombre }}?</p>
+<form method="post" class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn" type="submit">Enviar reseña</button>
+</form>
+{% endblock %}

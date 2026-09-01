@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Lo que dicen nuestros clientes</h1>
+<div class="grid">
+    {% for resena in resenas %}
+    <div class="card">
+        <p>{{ resena.puntaje }} ★</p>
+        <p>"{{ resena.comentario }}"</p>
+        <p><small>{{ resena.turno.nombre_cliente }}</small></p>
+    </div>
+    {% empty %}
+    <p>Todavía no hay reseñas publicadas.</p>
+    {% endfor %}
+</div>
+{% endblock %}
