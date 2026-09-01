@@ -15,14 +15,6 @@ Sistema web para gestionar una peluquería con Django. Este proyecto está pensa
 - pip
 - Git
 
-## Estructura del proyecto
-
-- `core/`: lógica principal de la aplicación
-- `prjolimpus/`: configuración del proyecto Django
-- `manage.py`: comando principal para ejecutar la app
-- `.env`: variables sensibles locales (no se sube a Git)
-- `.env.example`: plantilla de variables necesarias
-
 ## Instalación
 
 1. Cloná el repositorio:
