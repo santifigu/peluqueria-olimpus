@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OLIMPUS SALON | Redescubre tu Estilo</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Plus Jakarta Sans & Syne -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#faf9f9",
+                        "outline": "#7f7663",
+                        "on-tertiary-container": "#434547",
+                        "tertiary": "#5d5e60",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "primary": "#735c00",
+                        "on-error-container": "#93000a",
+                        "primary-container": "#d4af37",
+                        "inverse-primary": "#e9c349",
+                        "on-primary-container": "#554300",
+                        "on-primary-fixed": "#241a00",
+                        "background": "#faf9f9",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dbdad9",
+                        "on-primary-fixed-variant": "#574500",
+                        "on-primary": "#ffffff",
+                        "surface": "#faf9f9",
+                        "secondary-container": "#e2dfde",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#b2b3b5",
+                        "surface-container": "#efeded",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#d0c5af",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary-fixed": "#e2e2e4",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#c6c6c8",
+                        "surface-container-low": "#f4f3f3",
+                        "inverse-surface": "#2f3031",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-secondary-container": "#636262",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-surface-variant": "#4d4635",
+                        "on-background": "#1b1c1c",
+                        "on-surface": "#1b1c1c",
+                        "primary-fixed-dim": "#e9c349",
+                        "secondary": "#5f5e5e",
+                        "surface-container-highest": "#e3e2e2",
+                        "surface-container-high": "#e9e8e8",
+                        "primary-fixed": "#ffe088",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#735c00",
+                        "surface-variant": "#e3e2e2",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "on-tertiary-fixed-variant": "#454749",
+                        "secondary-fixed": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "section-gap": "160px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Syne"],
+                        "headline-md": ["Syne"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Syne"],
+                        "display-xl": ["Syne"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["42px", { "lineHeight": "110%", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "100%", "letterSpacing": "0.2em", "fontWeight": "700" }],
+                        "headline-lg": ["64px", { "lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-xl": ["96px", { "lineHeight": "100%", "letterSpacing": "-0.04em", "fontWeight": "800" }]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        /* Experimental / High-Fashion specific styles */
+        body { background-color: #faf9f9; }
+        
+        .btn-primary {
+            background-color: #1a1a1a;
+            color: #d4af37;
+            padding: 16px 32px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 1px solid #1a1a1a;
+        }
+        
+        .btn-primary:hover {
+            background-color: #d4af37;
+            color: #1a1a1a;
+            border-color: #d4af37;
+        }
+        
+        .btn-ghost {
+            background-color: transparent;
+            color: #1a1a1a;
+            padding: 16px 32px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 1px solid #1a1a1a;
+        }
+        
+        .btn-ghost:hover {
+            background-color: #1a1a1a;
+            color: #faf9f9;
+        }
+
+        .input-editorial {
+            border: none;
+            border-bottom: 1px solid #1a1a1a;
+            background: transparent;
+            padding: 8px 0;
+            width: 100%;
+            transition: border-color 0.3s ease;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px;
+        }
+        
+        .input-editorial:focus {
+            outline: none;
+            border-bottom-color: #d4af37;
+            box-shadow: none;
+        }
+
+        .label-editorial {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 8px;
+            color: #4d4635;
+        }
+        
+        /* Smooth reveal animations for scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-surface-container-highest sticky top-0 w-full z-50 border-b border-outline dark:border-outline-variant flat no shadows transition-colors duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-container-max mx-auto h-[80px]">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md tracking-tighter text-on-surface dark:text-on-surface-variant flex-shrink-0" href="#">
+                OLIMPUS SALON
+            </a>
+<!-- Desktop Navigation Links -->
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface tracking-[0.2em] hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 scale-100 transition-all active:scale-95" href="#services">SERVICES</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface tracking-[0.2em] hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 scale-100 transition-all active:scale-95" href="#team">THE TEAM</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface tracking-[0.2em] hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 scale-100 transition-all active:scale-95" href="#gallery">GALLERY</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface tracking-[0.2em] hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300 scale-100 transition-all active:scale-95" href="#boutique">BOUTIQUE</a>
+</div>
+<!-- Trailing Action (Desktop) -->
+<div class="hidden md:block flex-shrink-0">
+<button class="font-label-caps text-label-caps text-primary dark:text-primary-fixed hover:text-primary-container transition-colors duration-300">
+                    BOOK NOW
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden flex items-center justify-center p-2 text-on-surface">
+<span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden bg-[#1a1a1a]">
+<!-- Hero Image Background -->
+<div class="absolute inset-0 z-0 opacity-60 mix-blend-luminosity">
+<img class="w-full h-full object-cover object-center" data-alt="A striking interior shot of a high-end luxury salon, featuring wide expanses of sharp architectural angles and pristine white space. The room is illuminated by high-key, soft lighting that creates a bright, modern aesthetic. Dominating the frame is a sleek black and gold salon chair. The mood is sophisticated, avant-garde, and exclusive." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8_h-Nd1i-rRikhGi2C4mTq4CAI6JXrXg94JP-yyLCgL-N_aul37By4x3Fqj4TvF0YBpxTtxhFiBFRXbCh_TKePiVEEg6xWnGH22atvtwFZbzXr6jrhslWavkfSP6sSAdl2kzFzAOGxmMvSHAYoP9865_YGq8OkzqLPP_Y0wp-YGszHf5_QtAhellJQNI_AEiJsYOhoXigyDG6miRBTum_X5Wr3nfyQuIFc89B0h-xAMokfY1YExmN"/>
+</div>
+<!-- Hero Content (Asymmetric Layout) -->
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 md:col-start-1 flex flex-col items-start justify-center text-on-tertiary">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-display-xl md:text-display-xl mb-8 uppercase tracking-tighter leading-none reveal">
+                        Redescubre tu<br/>
+<span class="text-primary-container">Estilo</span> en Olimpus
+                    </h1>
+<div class="reveal" style="transition-delay: 200ms;">
+<button class="btn-primary mt-4">
+                            Reservar Ahora
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid Style) -->
+<section class="w-full py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="services">
+<div class="mb-24 flex flex-col md:flex-row md:items-end md:justify-between reveal">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg uppercase tracking-tighter mb-6 text-on-surface">Nuestra Curaduría</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">El cabello como lienzo. Servicios diseñados con precisión arquitectónica y una visión de vanguardia.</p>
+</div>
+<div class="mt-8 md:mt-0">
+<a class="btn-ghost flex items-center gap-2 inline-flex" href="#">
+                        Ver Menú Completo <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[300px] md:auto-rows-[400px]">
+<!-- Service 1: Corte (Large) -->
+<div class="md:col-span-8 relative group overflow-hidden bg-surface-dim reveal">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-80 mix-blend-multiply" data-alt="A close-up, high-fashion editorial shot of sharp, precise haircutting scissors resting on a textured concrete surface next to a geometric gold mirror. The lighting is dramatic and directional, creating strong shadows and highlighting the metallic textures. The overall mood is cold, sharp, and intensely professional, adhering to an avant-garde salon aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkNDVdNIAtwnhvjT_lrr5gtei1_mW5_G6jlLHnK7L_jcd3kM_hXLBOGpFi3KnA6lE8ve1S3kbyVPMCbvGmRCLKeWaPZtkDFpeOKb9YHMnV338dSlU-FoNgjWwcI76knjqNmcK4phQnd-NsRjtNv6a5zq0xGMi0ZiAKxgz7gikOcZCKFkz9lxihRVkWrFc7k91GXUsNEBi8uJOADtrfVfJsA4ukQ0edrKDE0xFzuraRAsPmded1BlA4')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full flex justify-between items-end">
+<div>
+<span class="font-label-caps text-label-caps text-primary-container block mb-2">01 / Arquitectura Capilar</span>
+<h3 class="font-headline-md text-headline-md text-on-tertiary uppercase">Corte</h3>
+</div>
+<span class="material-symbols-outlined text-on-tertiary opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-[-10px] group-hover:translate-x-0" style="font-size: 32px;">north_east</span>
+</div>
+</div>
+<!-- Service 2: Coloración (Tall) -->
+<div class="md:col-span-4 md:row-span-2 relative group overflow-hidden bg-[#1a1a1a] reveal" style="transition-delay: 100ms;">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-70" data-alt="An abstract, macro photograph of liquid hair color mixing in a pure white bowl. A vibrant, striking streak of golden-blonde dye bleeds into a deep, pitch-black liquid, creating a harsh, beautiful contrast. The lighting is intense and studio-quality. The image feels like a piece of modern, fluid art rather than a standard salon photo." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqDfBCZLL4yAjM7wXK5QVUwCF9HNbMcHmdDyRKxVPSOxvueWlG7wydCWV4J2kWKfzU_DZ9kL1_jGiCtL3RfNMRVYxTAdJnRQ6gflA-OYqJ-FfZY2QdH5P772mqqNmsGYzpWuNfn4Dab3JKiefg9-SBbxJngWsBowQ_lz5f2RtMf4L2MGXX23iB3hQstkOIdG3Bf86_SGLMb9aHjhMbB2mWlxyy8VXvKX69jI8h1utuB4v-TpdyInUu')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="font-label-caps text-label-caps text-primary-container block mb-2">02 / Pigmentación</span>
+<h3 class="font-headline-md text-headline-md text-on-tertiary uppercase mb-4">Coloración</h3>
+<p class="font-body-md text-body-md text-surface-container-low opacity-80">Técnicas avanzadas para dimensiones de color impecables.</p>
+</div>
+</div>
+<!-- Service 3: Tratamientos (Square) -->
+<div class="md:col-span-4 relative group overflow-hidden bg-surface-container-highest reveal">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-60 mix-blend-luminosity" data-alt="A minimalist composition showing a sleek, matte black bottle of luxury hair treatment serum standing alone on a pristine white marble block. A single, harsh beam of warm light cuts across the frame, highlighting a subtle gold logo on the bottle. The aesthetic is extremely clean, high-end, and clinical." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUvsCU_Z4k-dVlgM3OzPE-988e5OrYFQ17JbSio41Hl95lao4H8CBhdFu5W2mKfg76R5N-9v_oXVwmyeKuYCrnxdxtB2_OABtipeBPvP8ernStc4JHUREFGl9Xk99cMKnX1PoGscl3vd8FfztpOOgdyKq4Q1-9JfFrlH1gXZLXDFXfxO_Mphkg-A0PS1vD1yIKXMPzqPl_IEPwiXVJRDSR26V9Eu0y8E4NaVgO645rcn7a5f-TcxxM')"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="font-label-caps text-label-caps text-on-surface block mb-2">03 / Restauración</span>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase">Tratamientos</h3>
+</div>
+</div>
+<!-- Service 4: Peinados (Square) -->
+<div class="md:col-span-4 relative group overflow-hidden bg-primary-container reveal" style="transition-delay: 100ms;">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 mix-blend-overlay opacity-30" data-alt="A high-contrast black and white editorial portrait of a woman viewed from behind, showcasing a highly structured, avant-garde updo hairstyle. The hair looks almost architectural. The background is pure, stark white. The overall feel is that of a high-fashion magazine spread." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2hwqtt4RjwVwczUBaT-WBNem3-tqD6ZZUK5Nx928Ulk4y6xav7tOCxcG1nBlrTdpkgkakyxrsPH-U5rmsHkMCc-X71dCLnwUGyvBzpx-3Hozu89XURYlWLMaJDNU7OtoICpPJ4teV_-NhGOUhtcgf27tIqNQv0zyt0Ak1_82GqaFzCrk89B-TtX__kfp8Zwc1ba2xRXifl37gvrmprGHFM2T3cGwN-6qjPsg8ACpVF2vm7rVT-2gf')"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="font-label-caps text-label-caps text-on-primary-fixed block mb-2">04 / Escultura</span>
+<h3 class="font-headline-md text-headline-md text-on-primary-fixed uppercase">Peinados</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section (High-Contrast Editorial Layout) -->
+<section class="w-full py-section-gap bg-inverse-surface dark:bg-surface-container-lowest text-on-tertiary overflow-hidden" id="team">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-24 flex flex-col md:flex-row md:items-end md:justify-between reveal">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg uppercase tracking-tighter text-on-tertiary">
+                        Los <span class="text-primary-container">Maestros</span><br/>del Diseño
+                    </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-24">
+<!-- Team Member 1 -->
+<div class="relative group reveal">
+<div class="aspect-w-3 aspect-h-4 md:aspect-square mb-8 overflow-hidden bg-[#1a1a1a]">
+<img class="w-full h-full object-cover object-center filter grayscale contrast-125 transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0" data-alt="Portrait of a stylist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2BbcdObPbfbzdjyQMJZnaQT-4B_NkWJnxpGFErt_1vHhalNI3b-5ida1m2rJ0O3RLe2hzPz1-tn1qUw6h-erI_BeNsJa0q881WqOeDH0q1uSTZXkRX5PJkVUPVf9JnTpSKKf375whrANGbItJEa3d2z2bqwmkSYN_DtZDxsFMd8IMT6fauQ1q8Et4xAR4793KhIVEWrNze8ZTohGcEhoH3wUGhMfxzqo5zaNiIUB1tbpcax8oHSB5"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md uppercase mb-2">Elena Rostova</h3>
+<p class="font-label-caps text-label-caps text-primary-container">Directora Creativa / Colorista</p>
+</div>
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-on-tertiary hover:text-inverse-surface transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="relative group reveal md:mt-32">
+<div class="aspect-w-3 aspect-h-4 md:aspect-square mb-8 overflow-hidden bg-[#1a1a1a]">
+<img class="w-full h-full object-cover object-center filter grayscale contrast-125 transition-transform duration-1000 group-hover:scale-105 group-hover:grayscale-0" data-alt="Portrait of a barber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW0zYcATHtTv6y5qFqwblIfCZaLn3puq4I35J7CG9kg4HWZPJp3_hd-rhOBIzB7N6H8M7nOUGpVoL4CQQYfGEs16i0985pb2qrF_msdGfdP9EkzLUwO_iVAXc6aDeoIZkUEtfFFndKGHwPk-jOTtqUUj8Do8-pGgqWLAYoHU44Y2VnTKjo5X8iFO6PzEzYdWpa35v2Rn8HBPVhB3yk9eoxchw-r3TnVMVjo3r5PPwbMEWyMVzk9p5s"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md uppercase mb-2">Marcus Vance</h3>
+<p class="font-label-caps text-label-caps text-primary-container">Especialista en Estructura / Corte</p>
+</div>
+<button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center hover:bg-on-tertiary hover:text-inverse-surface transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Map Section (Asymmetric Minimalist) -->
+<section class="w-full py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="boutique">
+<div class="mb-24 flex flex-col md:flex-row md:items-end md:justify-between reveal">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg uppercase tracking-tighter mb-6 text-on-surface">BOUTIQUE OLIMPUS</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">Productos de autor seleccionados para mantener la arquitectura de tu cabello en casa.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Product 1 -->
+<div class="flex flex-col reveal">
+<div class="aspect-w-3 aspect-h-4 bg-surface-container-highest mb-6 overflow-hidden group">
+<img alt="Aceite de Argán Puro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjeDvgXeVBMqGkx52E0QknME6PL1HR4n0gvJmkRdyvPft-EImcqN4ofUSrIzCjHwboTlf02IxRHHb-fjQYdfWm7rrzAE4cuvpo_ebSbUp9yqMmuFeNp7C7zzeFDZP64NknZoSeCR56ibPd-jyjLpODpFrbEKmXh_1W4g8P5BryHnkuySn0oiskOXS_YR0AJrn5nyVeUJ1HdBMUNrxd9Zgf96Ybm4HnisQZQ4PCx0VotN249iWG1Vhp"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-label-caps text-label-caps tracking-[0.2em] text-on-surface">Aceite de Argán Puro</h3>
+<span class="font-body-md text-body-md text-primary">€45</span>
+</div>
+<button class="btn-ghost w-full py-base text-center">Añadir al Carrito</button>
+</div>
+<!-- Product 2 -->
+<div class="flex flex-col reveal" style="transition-delay: 100ms;">
+<div class="aspect-w-3 aspect-h-4 bg-surface-container-highest mb-6 overflow-hidden group">
+<img alt="Champú Reconstructor" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGBNapZ0Pp1CFVJM-18VIQboLu5RsZTXL02KrK2G5JSRWutj7dEUizYVVnriuXSlSCHWVmg-X-cjE5vs0oOlDrGMy9Jd98HCK7d1HdDcytLZcZKL_DqEx1K2QsJov5zJPcmNiABYz-wuPevxQN9eEGXW_DKRaF4dzO4ZBFy1YoRVwf1NHNC60SuyGhjqsLmVPcjFifR_jvp17FLuF2fn3I8pMh8YGuqrcbQvapWFKPQ6nj0dz2HgMC"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-label-caps text-label-caps tracking-[0.2em] text-on-surface">Champú Reconstructor</h3>
+<span class="font-body-md text-body-md text-primary">€32</span>
+</div>
+<button class="btn-ghost w-full py-base text-center">Añadir al Carrito</button>
+</div>
+<!-- Product 3 -->
+<div class="flex flex-col reveal" style="transition-delay: 200ms;">
+<div class="aspect-w-3 aspect-h-4 bg-surface-container-highest mb-6 overflow-hidden group">
+<img alt="Mascarilla de Hidratación" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm27BWCRV9UUq76mK3-vpXRLg3DY_hzazJgbhHNTfyr5G2PMTe-ifnZ-ZQEWe7k92euBokUXT18dMeon7Q9jIAT5d0Z7-kYEGeUIzcBzGhRsyATgk9JTieAlhk-UcNAVPQBrUD5jSi3YaFcWm72Y3wvHMMxrJOGzyCQ-28WVoqVWt6ahxNraNExUXPrlhkUjwPoEVs88oyduN7fjInHvvoYfytiPk-wR9Y5D0sOhy5_GETMe5eeOvJ"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-label-caps text-label-caps tracking-[0.2em] text-on-surface">Mascarilla de Hidratación</h3>
+<span class="font-body-md text-body-md text-primary">€42</span>
+</div>
+<button class="btn-ghost w-full py-base text-center">Añadir al Carrito</button>
+</div>
+</div>
+</section><section class="w-full py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<!-- Contact Form Area -->
+<div class="md:col-span-5 md:col-start-1 reveal">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-md md:text-headline-md uppercase tracking-tighter mb-12 text-on-surface">Asegura tu<br/>Espacio</h2>
+<form class="space-y-8">
+<div>
+<label class="label-editorial">Nombre Completo</label>
+<input class="input-editorial" placeholder="Ej. Ana García" type="text"/>
+</div>
+<div>
+<label class="label-editorial">Servicio de Interés</label>
+<input class="input-editorial" placeholder="Ej. Corte y Coloración" type="text"/>
+</div>
+<div>
+<label class="label-editorial">Fecha Preferida</label>
+<input class="input-editorial" type="date"/>
+</div>
+<div class="pt-8">
+<button class="btn-primary w-full text-center" type="button">
+                                Solicitar Reserva
+                            </button>
+</div>
+</form>
+</div>
+<!-- Minimalist Location / Map Area -->
+<div class="md:col-span-6 md:col-start-7 mt-16 md:mt-0 reveal" style="transition-delay: 200ms;">
+<div class="bg-surface-container-highest p-8 md:p-12 h-full flex flex-col justify-between">
+<div class="mb-12">
+<h3 class="font-headline-md text-headline-md uppercase mb-6">El Atelier</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Av. del Diseño 404, Distrito Moda</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Ciudad de Vanguardia, 28001</p>
+<a class="font-label-caps text-label-caps text-primary underline hover:text-on-surface transition-colors inline-flex items-center gap-2" href="#">
+                                Obtener Direcciones <span class="material-symbols-outlined" style="font-size: 14px;">arrow_outward</span>
+</a>
+</div>
+<!-- Map Image Area -->
+<div class="w-full h-64 md:h-80 bg-surface-dim overflow-hidden relative group">
+<!-- Minimalist Map Style Overlay -->
+<img class="absolute inset-0 w-full h-full object-cover filter grayscale contrast-125 opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="A highly stylized, minimalist map view of a modern city center. The map is rendered in high-contrast greyscale with sharp, geometric lines representing streets. A single, distinct gold marker indicates a location in the center. The aesthetic is clean, luxurious, and resembles an architectural blueprint." data-location="Ciudad de Vanguardia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHBP07MLkjtaR2_PAw8gOyXRzuviOSiBHCpvaMqzZho1T2fUp3_b1RVTDB4_m62RKC3vh9pxv2XT-hnheyWgBBlwHl_2cm2Ckd7_EJRlOBTqO4s1GNzY_LBPNXftpF_8ZjXDqjUqGt-sVAaTXRhCWkMNwKfUH3p_KFEp-zAhQMBBjSRg3Ur_oJo3ui5K4CsSpHB6_IgEhh7qRtS3d2gJxcQ4iHX1RYSfdFVUA-nf8z5eJSZhZiqGcZ"/>
+<div class="absolute inset-0 bg-[#1a1a1a] opacity-10 mix-blend-multiply"></div>
+<!-- Center Marker UI -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-4 h-4 bg-primary-container rounded-full shadow-[0_0_15px_rgba(212,175,55,0.5)]"></div>
+<div class="w-px h-8 bg-primary-container mt-1"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest w-full py-section-gap border-t border-outline dark:border-outline-variant flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Brand -->
+<div class="flex flex-col justify-between h-full reveal">
+<a class="font-headline-md text-headline-md text-primary-fixed dark:text-primary mb-8 block tracking-tighter" href="#">
+                    OLIMPUS SALON
+                </a>
+<p class="font-body-md text-body-md text-on-tertiary dark:text-on-surface-variant opacity-80 mt-auto">
+                    © 2024 OLIMPUS SALON. ALL RIGHTS RESERVED.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col space-y-4 reveal" style="transition-delay: 100ms;">
+<a class="font-label-caps text-label-caps text-on-tertiary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary-fixed dark:hover:text-primary transition-opacity cursor-pointer transition-all tracking-[0.2em]" href="#">INSTAGRAM</a>
+<a class="font-label-caps text-label-caps text-on-tertiary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary-fixed dark:hover:text-primary transition-opacity cursor-pointer transition-all tracking-[0.2em]" href="#">FACEBOOK</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col space-y-4 reveal" style="transition-delay: 200ms;">
+<a class="font-label-caps text-label-caps text-on-tertiary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary-fixed dark:hover:text-primary transition-opacity cursor-pointer transition-all tracking-[0.2em]" href="#">CONTACT</a>
+<a class="font-label-caps text-label-caps text-on-tertiary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary-fixed dark:hover:text-primary transition-opacity cursor-pointer transition-all tracking-[0.2em]" href="#">PRIVACY POLICY</a>
+</div>
+</div>
+</footer>
+<!-- Simple Scroll Reveal Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const reveals = document.querySelectorAll('.reveal');
+
+            function revealOnScroll() {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Trigger on load
+        });
+    </script>
+</body></html>
